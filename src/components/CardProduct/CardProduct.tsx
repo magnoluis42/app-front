@@ -1,11 +1,15 @@
 import { Card } from 'primereact/card';
+import type { Product } from '../Interface/Product';
 
-export default function CardProduct() {
+interface CardProductProps{
+    product: Product;
+    onOpenModal: (product: Product) => void;
+}
+export default function CardProduct({ product, onOpenModal }: CardProductProps) {
     return (
         <div className="flex justify-content-center p-2">
             <Card className="w-full md:w-30rem shadow-2 border-round-xl overflow-hidden cursor-pointer hover:shadow-4 transition-duration-200">
                 
-                {/* flex-row garante que fiquem lado a lado */}
                 <div className="flex flex-row align-items-center justify-content-between gap-3 h-full">
                     
                     {/* --- LADO ESQUERDO: TEXTO (flex-1 para ocupar o espaço sobrando) --- */}
@@ -30,12 +34,11 @@ export default function CardProduct() {
                         </div>
                     </div>
 
-                    {/* --- LADO DIREITO: IMAGEM FIXA --- */}
                     <div className="flex-shrink-0">
                         <img 
                             alt="Burguer" 
                             src="https://images.unsplash.com/photo-1702728109878-c61a98d80491?q=80&w=1170&auto=format&fit=crop" 
-                            className="border-round-md" // Borda levemente arredondada
+                            className="border-round-md" 
                             style={{ 
                                 width: '100px', 
                                 height: '100px', 

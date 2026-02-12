@@ -5,7 +5,7 @@ import './NavbarDefault.css';
 
 export default function NavbarDefault() {
     const navigate = useNavigate();
-    const location = useLocation(); // Para detectar em qual rota estamos
+    const location = useLocation();
     const [activeIndex, setActiveIndex] = useState(0);
 
     const items = [
