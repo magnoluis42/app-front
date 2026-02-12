@@ -67,3 +67,28 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+/* src/index.css */
+@import url("primereact/resources/themes/lara-light-cyan/theme.css");
+@import url("primeicons/primeicons.css");
+
+:root {
+    --color-bg-cream: #FFFDF5;     
+    --color-card-bg: #FFF8E1;     
+    --color-text-brown: #4E342E;   
+    --color-text-light: #795548;   
+    --color-accent-gold: #FFB300;  
+    --color-divider: #FFE082;     
+    --color-hover: #FFF3E0;        
+    
+    --border-radius-card: 20px;
+    --shadow-soft: 0 4px 15px rgba(255, 179, 0, 0.15);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; 
+    background-color: var(--color-bg-cream); 
+    color: var(--color-text-brown);
+}
