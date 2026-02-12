@@ -1,43 +1,50 @@
-import { Menubar } from 'primereact/menubar';
-import { InputText } from 'primereact/inputtext';
-import type { MenuItem } from 'primereact/menuitem';
-import 'primeicons/primeicons.css';
-import 'primeflex/primeflex.css';
-import { Badge } from 'primereact/badge';
-import { Avatar } from 'primereact/avatar';  
+import { TabMenu } from 'primereact/tabmenu';
+import { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import './NavbarDefault.css';
 
 export default function NavbarDefault() {
-    const itemRenderer = (item: any) => (
-        <a className="flex align-items-center p-menuitem-link">
-            <span className={item.icon} />
-            <span className="mx-2">{item.label}</span>
-            {item.badge && <Badge className="ml-auto" value={item.badge} />}
-            {item.shortcut && <span className="ml-auto border-1 surface-border border-round surface-100 text-xs p-1">{item.shortcut}</span>}
-        </a>
-    );
-    const items: MenuItem[] = [
-        {
-            label: 'Home',
-            icon: 'pi pi-home'
+    const navigate = useNavigate();
+    const location = useLocation(); // Para detectar em qual rota estamos
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    const items = [
+        { 
+            label: 'Início', 
+            icon: 'pi pi-home', 
+            command: () => { navigate('/') } 
         },
-        {
-            label: 'Features',
-            icon: 'pi pi-star'
-        }
+        { 
+            label: 'Pedidos', 
+            icon: 'pi pi-list', 
+            command: () => { navigate('/pedidos') } 
+        }, 
+        { 
+            label: 'Perfil', 
+            icon: 'pi pi-user', 
+            command: () => { navigate('/perfil') } 
+        },
     ];
 
-    const end = (
-        <div className="flex align-items-center gap-2">
-            <InputText placeholder="Search" type="text" className="w-8rem sm:w-auto" />
-            <Avatar image="https://primefaces.org/cdn/primerestartact/images/avatar/amyelsner.png" shape="circle" />
-        </div>
-    );
+    useEffect(() => {
+        const currentIndex = items.findIndex(item => {
+            if (item.label === 'Início') return location.pathname === '/';
+            if (item.label === 'Pedidos') return location.pathname === '/pedidos';
+            if (item.label === 'Perfil') return location.pathname === '/perfil';
+            return false;
+        });
+        if (currentIndex !== -1) setActiveIndex(currentIndex);
+    }, [location.pathname]);
 
     return (
-        <div className="card" style={{ marginBottom: '2rem', position: 'sticky', top: 0, zIndex: 1000 }}>
-            <Menubar model={items} end={end} />
+        <div className="navbar">
+            <div className="navbar-itens">
+                <TabMenu 
+                    model={items} 
+                    activeIndex={activeIndex} 
+                    onTabChange={(e) => setActiveIndex(e.index)} 
+                />
+            </div>
         </div>
-    )
+    );
 }
-        
-        

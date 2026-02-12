@@ -12,13 +12,13 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@material-tailwind/react": "^2.1.10",
+    "primeflex": "4.0.0",
+    "primeicons": "^5.0.0",
     "primereact": "^10.9.7",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.13.0",
-    "primeicons": "^5.0.0",
-    "react-transition-group": "4.4.5",
-    "primeflex": "4.0.0"
+    "react-transition-group": "4.4.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

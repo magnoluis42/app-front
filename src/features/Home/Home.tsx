@@ -3,9 +3,9 @@ import NavbarDefault from "../../components/Navbar/NavbarDefault";
 
 export default function Home(){
     return(
-        <div className="home">
-            <NavbarDefault />
+        <div className="home" >
             <CardProductList />
+            <NavbarDefault />
         </div>
     )
 }

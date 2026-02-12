@@ -1,0 +1,19 @@
+/* absolute bottom-0 left-0 right-0 p-3 z-5 */
+/* "mx-auto" style={{ maxWidth: '30rem' }} */
+                    /* className="shadow-4 border-round-xl overflow-hidden" */
+
+
+.navbar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+
+.navbar-itens{
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    box-shadow: 5px 4px 8px 5px rgba(0, 0, 0, 0.2);
+}
