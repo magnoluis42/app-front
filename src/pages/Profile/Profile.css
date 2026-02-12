@@ -1,0 +1,114 @@
+.profile-container {
+    padding: 24px;
+    font-family: 'Poppins', sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--color-bg-cream);
+    min-height: 100vh;
+}
+
+.page-title {
+    color: var(--color-text-brown);
+    font-size: 28px;
+    margin-bottom: 32px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.image-profile-wrapper .MuiAvatar-root {
+    background-color: var(--color-card-bg) !important; 
+    color: var(--color-accent-gold) !important; 
+    border: 2px solid var(--color-accent-gold) !important;
+}
+
+.profile-header-card {
+    background-color: var(--color-card-bg); 
+    border-radius: 24px;
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 48px; 
+    box-shadow: 0 10px 30px -10px rgba(78, 52, 46, 0.1);
+}
+
+.infos-user {
+    display: flex;
+    flex-direction: column;
+}
+
+.infos-user .name {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text-brown);
+    line-height: 1.2;
+}
+
+.info-user-contact small {
+    display: block;
+    font-size: 15px;
+    color: var(--color-text-light);
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+.profile-menu-list-minimal {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu-item-minimal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    cursor: pointer;
+    border-radius: 16px;
+    transition: all 0.2s ease-in-out;
+    background-color: transparent; 
+}
+
+.menu-item-minimal:hover {
+    background-color: var(--color-hover-item);
+    transform: translateX(4px);
+}
+
+.menu-item-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-icon {
+    font-size: 28px !important;
+    color: var(--color-text-light);
+}
+
+.primary-icon {
+    color: var(--color-accent-gold);
+}
+
+.menu-texts {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--color-text-brown);
+}
+
+.menu-subtitle {
+    font-size: 14px;
+    color: var(--color-text-light);
+    opacity: 0.8;
+    margin-top: 4px;
+}
+
+.arrow-icon {
+    color: var(--color-text-light);
+    opacity: 0.5; 
+}
