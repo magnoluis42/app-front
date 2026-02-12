@@ -1,19 +1,49 @@
-/* absolute bottom-0 left-0 right-0 p-3 z-5 */
-/* "mx-auto" style={{ maxWidth: '30rem' }} */
-                    /* className="shadow-4 border-round-xl overflow-hidden" */
-
-
-.navbar{
+.navbar-container {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: white;
+    z-index: 1000;
+    border-radius: 24px 24px 0 0; 
+    overflow: hidden;
+    box-shadow: 0 -4px 20px rgba(78, 52, 46, 0.08);
 }
 
-.navbar-itens{
-    display: flex;
-    justify-content: center;
-    z-index: 1000;
-    box-shadow: 5px 4px 8px 5px rgba(0, 0, 0, 0.2);
+.navbar-content {
+    background-color: #FFFFFF !important; 
+    height: 70px !important;
+}
+
+.navbar-action {
+    color: var(--color-text-light, #795548) !important;
+    transition: all 0.3s ease !important;
+    min-width: auto !important; /
+    padding: 6px 12px !important;
+}
+
+.navbar-action svg {
+    font-size: 1.5rem;
+    transition: all 0.2s ease;
+    margin-bottom: 4px;
+}
+
+.navbar-action .MuiBottomNavigationAction-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+}
+
+
+.navbar-action.Mui-selected {
+    color: var(--color-accent-gold, #FFB300) !important;
+}
+
+.navbar-action.Mui-selected svg {
+    font-size: 1.8rem;
+    filter: drop-shadow(0 2px 4px rgba(255, 179, 0, 0.3));
+    transform: translateY(-2px); 
+}
+
+.navbar-action.Mui-selected .MuiBottomNavigationAction-label {
+    font-size: 0.85rem;
+    font-weight: 600;
 }

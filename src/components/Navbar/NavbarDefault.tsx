@@ -1,50 +1,55 @@
-import { TabMenu } from 'primereact/tabmenu';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import Paper from '@mui/material/Paper';
+import BottomNavigation from '@mui/material/BottomNavigation';
+import BottomNavigationAction from '@mui/material/BottomNavigationAction';
+import HomeIcon from '@mui/icons-material/Home';
+import ReceiptLongIcon from '@mui/icons-material/ReceiptLong';
+import PersonIcon from '@mui/icons-material/Person';
+
 import './NavbarDefault.css';
 
 export default function NavbarDefault() {
     const navigate = useNavigate();
     const location = useLocation();
-    const [activeIndex, setActiveIndex] = useState(0);
-
-    const items = [
-        { 
-            label: 'Início', 
-            icon: 'pi pi-home', 
-            command: () => { navigate('/') } 
-        },
-        { 
-            label: 'Pedidos', 
-            icon: 'pi pi-list', 
-            command: () => { navigate('/pedidos') } 
-        }, 
-        { 
-            label: 'Perfil', 
-            icon: 'pi pi-user', 
-            command: () => { navigate('/perfil') } 
-        },
-    ];
+    const [value, setValue] = useState(0);
 
     useEffect(() => {
-        const currentIndex = items.findIndex(item => {
-            if (item.label === 'Início') return location.pathname === '/';
-            if (item.label === 'Pedidos') return location.pathname === '/pedidos';
-            if (item.label === 'Perfil') return location.pathname === '/perfil';
-            return false;
-        });
-        if (currentIndex !== -1) setActiveIndex(currentIndex);
+        const path = location.pathname;
+        if (path === '/') setValue(0);
+        else if (path === '/pedidos') setValue(1);
+        else if (path === '/perfil') setValue(2);
     }, [location.pathname]);
 
     return (
-        <div className="navbar">
-            <div className="navbar-itens">
-                <TabMenu 
-                    model={items} 
-                    activeIndex={activeIndex} 
-                    onTabChange={(e) => setActiveIndex(e.index)} 
+        <Paper className="navbar-container" elevation={3}>
+            <BottomNavigation
+                showLabels
+                value={value}
+                onChange={(event, newValue) => {
+                    setValue(newValue);
+                    if (newValue === 0) navigate('/');
+                    if (newValue === 1) navigate('/pedidos');
+                    if (newValue === 2) navigate('/perfil');
+                }}
+                className="navbar-content"
+            >
+                <BottomNavigationAction 
+                    label="Início" 
+                    icon={<HomeIcon />} 
+                    className="navbar-action" 
                 />
-            </div>
-        </div>
+                <BottomNavigationAction 
+                    label="Pedidos" 
+                    icon={<ReceiptLongIcon />} 
+                    className="navbar-action" 
+                />
+                <BottomNavigationAction 
+                    label="Perfil" 
+                    icon={<PersonIcon />} 
+                    className="navbar-action" 
+                />
+            </BottomNavigation>
+        </Paper>
     );
 }
