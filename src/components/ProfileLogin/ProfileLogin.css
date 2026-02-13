@@ -1,0 +1,211 @@
+.profile-login-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    background-color: var(--color-bg-cream);
+    padding: 2rem;
+    text-align: center;
+}
+
+.login-illustration {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 2rem;
+    filter: drop-shadow(var(--shadow-soft));
+}
+
+.login-page-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-brown);
+    margin-bottom: 1.5rem;
+}
+
+.btn-main-action {
+    background-color: var(--color-accent-gold) !important;
+    color: var(--color-text-brown) !important;
+    font-weight: 700 !important;
+    padding: 12px 32px !important;
+    border-radius: var(--border-radius-card) !important; 
+    width: 100%;
+    max-width: 400px;
+    text-transform: none !important;
+    font-size: 1rem !important;
+    box-shadow: var(--shadow-soft) !important;
+    transition: transform 0.2s ease, filter 0.2s !important;
+}
+
+.btn-main-action:hover {
+    filter: brightness(1.05);
+    transform: translateY(-2px);
+}
+
+
+.profile-login-dialog .MuiPaper-root {
+    background-color: var(--color-bg-cream) !important;
+    border-radius: var(--border-radius-card) !important;
+    border: 1px solid var(--color-divider);
+}
+
+.custom-modal-header {
+    border-bottom: 1px solid var(--color-divider);
+    padding: 16px 24px !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-title-text {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-text-brown);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.modal-content-wrapper {
+    padding: 24px !important;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--color-bg-cream);
+}
+
+.tabs-container {
+    background-color: var(--color-hover); 
+    padding: 4px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    display: flex;
+    gap: 4px;
+    border: 1px solid var(--color-divider);
+}
+
+.tab-btn-custom {
+    border-radius: 10px !important;
+    text-transform: none !important;
+    font-weight: 600 !important;
+    flex: 1;
+    transition: all 0.2s ease !important;
+}
+
+.tab-btn-custom.active {
+    background-color: #fff !important; 
+    color: var(--color-accent-gold) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.tab-btn-custom.inactive {
+    background-color: transparent !important;
+    color: var(--color-text-light) !important;
+}
+
+.input-label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text-brown);
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.custom-textfield .MuiOutlinedInput-root {
+    border-radius: 12px !important;
+    background-color: #fff; 
+}
+
+.custom-textfield .MuiOutlinedInput-notchedOutline {
+    border-color: var(--color-divider);
+}
+
+.custom-textfield .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: var(--color-accent-gold);
+}
+
+.custom-textfield .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: var(--color-accent-gold) !important;
+    border-width: 2px;
+}
+
+.custom-textfield input {
+    color: var(--color-text-brown);
+}
+
+.flag-icon {
+    width: 20px;
+    margin-right: 4px;
+    border-radius: 2px;
+}
+
+.step-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text-brown);
+    margin-bottom: 4px;
+}
+
+.step-subtitle {
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+    margin-bottom: 24px;
+}
+
+.terms-label {
+    font-size: 0.75rem;
+    color: var(--color-text-light);
+    line-height: 1.4;
+}
+
+.link-highlight {
+    color: var(--color-accent-gold);
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer-action-wrapper {
+    margin-top: auto;
+    padding-top: 24px;
+}
+
+.btn-continue {
+    background-color: var(--color-accent-gold) !important;
+    color: var(--color-text-brown) !important;
+    font-weight: 700 !important;
+    padding: 12px !important;
+    border-radius: 12px !important;
+    text-transform: none !important;
+    font-size: 1rem !important;
+    box-shadow: var(--shadow-soft);
+}
+
+.btn-continue:hover {
+    filter: brightness(1.05);
+}
+
+.btn-continue:disabled {
+    background-color: var(--color-hover) !important;
+    color: var(--color-text-light) !important;
+    opacity: 0.7;
+    box-shadow: none;
+}
+
+.yooga-footer {
+    padding: 12px;
+    border-top: 1px solid var(--color-divider);
+    text-align: center;
+    background-color: var(--color-card-bg); 
+}
+
+.yooga-text {
+    font-size: 0.75rem;
+    color: var(--color-text-light);
+}
+
+.yooga-brand {
+    color: var(--color-accent-gold);
+    font-weight: 800;
+    font-style: italic;
+}

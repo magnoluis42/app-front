@@ -14,7 +14,7 @@
 .product-card {
     background-color: var(--color-card-bg) !important; 
     border-radius: 20px !important;
-    border: none !important;
+    border: 2px solid var(--color-divider);
     box-shadow: 0 4px 20px -5px rgba(78, 52, 46, 0.08) !important; 
     transition: transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
