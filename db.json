@@ -1,0 +1,27 @@
+{
+  "$schema": "./node_modules/json-server/schema.json",
+  "products": [
+        {
+            "id": 1,
+            "name": "Burguer Churras",
+            "description": "Pão brioche, blend 160g, queijo mussarela, farofa de bacon, vinagrete e molho especial.",
+            "price": 23.00,
+            "imageUrl": "https://images.unsplash.com/photo-1702728109878-c61a98d80491?q=80&w=1170&auto=format&fit=crop"
+        },
+        {
+            "id": 2,
+            "name": "Smash Duplo",
+            "description": "Dois blends de 80g amassadinhos na chapa com crosta crocante, cheddar inglês e cebola caramelizada.",
+            "price": 28.50,
+            "imageUrl": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1000&auto=format&fit=crop"
+        },
+        {
+            "id": 3,
+            "name": "Pizza Tradicional",
+            "description": "Pizza clássica da casa desde 1905 com molho de tomate artesanal e manjericão fresco.",
+            "price": 40.00,
+            "imageUrl": "https://images.unsplash.com/photo-1700760934249-93efbb574d23?q=80&w=880&auto=format&fit=crop"
+        }
+  ]
+
+}
